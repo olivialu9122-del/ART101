@@ -1,0 +1,55 @@
+body {
+    background-color: #fff4e8;
+    text-align: center;
+    font-family: 'Trebuchet MS' , sans-serif;
+    color: #6f4a55
+    padding: 30px 20px;
+    margin: 0;
+
+}
+
+h1 {
+    color: #e97a9a;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #a64c72;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.candy-house {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 25px;
+
+}
+
+.intro-box {
+    background-color: white;
+    max-width: 460px;
+    padding: 25px;
+    margin: 30px auto;
+    border-radius: 20px;
+    box-sizing: border-box;
+
+}
+
+.picture-box img {
+    width: 200px;
+    max-width 100%;
+    height: auto;
+    border-radius: 20px;
+
+}
+
+p{
+    line-height: 1.7;
+    
+}
