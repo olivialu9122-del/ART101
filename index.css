@@ -1,32 +1,319 @@
+
+
+/* =========================
+   OLIVIA'S LITTLE CORNER
+   Vintage Indie Style
+   ========================= */
+
+
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #fff4f0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    color: #6b4b55;
-    padding: 30px;
+    margin: 0;
+    background-color: #e8dfd1;
+    color: #3f3934;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
-h1 {
-    color: #e8789a;
-    font-size: 42px;
+
+/* MAIN PAGE */
+
+#page {
+    max-width: 950px;
+    margin: 35px auto;
+    padding: 45px 55px;
+    background-color: #f5f0e6;
+    box-shadow: 0 5px 25px rgba(65, 50, 35, 0.08);
 }
 
-h2 {
-    color: #b65c83;
-    margin-top: 35px;
+
+/* HEADER */
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #c8b8a3;
 }
 
-p {
+.logo {
+    color: #8b443d;
     font-size: 18px;
+    font-style: italic;
 }
 
-img {
-    width: 350px;
-    max-width: 100%;
-    border-radius: 20px;
+.header-info {
+    font-size: 12px;
+    color: #777d65;
+    letter-spacing: 1px;
 }
 
-a {
-    color: #d45c89;
-    font-size: 20px;
+
+/* WELCOME SECTION */
+
+.hero {
+    padding: 70px 0 75px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    color: #8b443d;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin: 25px 0;
+}
+
+.hero h1 em {
+    color: #8b443d;
+    font-weight: normal;
+}
+
+.hero-description {
+    max-width: 500px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #65584f;
+}
+
+.hero-note {
+    margin-top: 30px;
+    font-size: 13px;
+    font-style: italic;
+    color: #777d65;
+}
+
+
+/* ABOUT ME + PHOTO */
+
+.top-section {
+    display: flex;
+    gap: 45px;
+    align-items: flex-start;
+    padding: 55px 0;
+    border-top: 1px solid #c8b8a3;
+    border-bottom: 1px solid #c8b8a3;
+}
+
+
+/* INTRODUCTION */
+
+#introduction {
+    flex: 2;
+    min-width: 0;
+}
+
+#introduction h2 {
+    font-size: 33px;
+    font-weight: normal;
+    margin: 20px 0 25px;
+}
+
+#introduction p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #65584f;
+}
+
+#introduction .eyebrow {
+    font-size: 12px;
+    color: #8b443d;
+    letter-spacing: 1px;
+}
+
+
+/* FAVORITES */
+
+.favorites {
+    margin-top: 35px;
+    padding: 18px 22px;
+    background-color: #e8e1d4;
+    border-left: 3px solid #8b443d;
+}
+
+#introduction .favorites-title {
+    color: #8b443d;
+    font-style: italic;
+    font-size: 16px;
+    margin: 0 0 5px;
+}
+
+.favorites p {
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+
+/* PROFILE PHOTO */
+
+.profile {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 10px 16px;
+    background-color: #e0d2bd;
+    text-align: center;
+    transform: rotate(2deg);
+    box-shadow: 3px 6px 15px rgba(65, 50, 35, 0.12);
+}
+
+.profile img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+.profile p {
+    font-size: 12px;
+    font-style: italic;
+    color: #65584f;
+    margin: 15px 0 0;
+}
+
+
+/* PROJECTS */
+
+.navigation {
+    padding: 55px 0 65px;
+}
+
+.navigation h2 {
+    font-size: 34px;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.projects-intro {
+    font-size: 14px;
+    font-style: italic;
+    color: #777d65;
+    margin-bottom: 35px;
+}
+
+.navigation ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    padding: 20px 0;
+    border-top: 1px solid #d6c9b8;
+}
+
+.navigation li:last-child {
+    border-bottom: 1px solid #d6c9b8;
+}
+
+.navigation a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    color: #65584f;
+    font-size: 21px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #8b443d;
+}
+
+.navigation li p {
+    margin: 10px 0 0;
+    color: #777d65;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.arrow {
+    color: #8b443d;
+    font-size: 23px;
+    transition: transform 0.3s ease;
+}
+
+.navigation a:hover .arrow {
+    transform: translate(4px, -4px);
+}
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 25px;
+    border-top: 1px solid #c8b8a3;
+    color: #777d65;
+    font-size: 12px;
+    font-style: italic;
+}
+
+
+/* MOBILE VERSION */
+
+@media (max-width: 650px) {
+
+    #page {
+        margin: 0;
+        padding: 25px;
+    }
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .top-section {
+        flex-direction: column;
+        gap: 40px;
+        padding: 45px 0;
+    }
+
+    #introduction {
+        width: 100%;
+    }
+
+    .profile {
+        width: 75%;
+        max-width: 300px;
+        align-self: center;
+    }
+
+    .navigation {
+        padding: 45px 0;
+    }
+
+    .navigation h2 {
+        font-size: 29px;
+    }
+
+    .navigation a {
+        font-size: 19px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
