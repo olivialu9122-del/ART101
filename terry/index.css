@@ -1,0 +1,437 @@
+
+:root {
+  --mint: #b8e4d0;
+  --mint-dark: #91cbb2;
+  --yellow: #fff1b8;
+  --cream: #fffdf0;
+  --pink: #f5b7c5;
+  --sage: #658c78;
+  --text: #526c5c;
+  --border: #739e89;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  color: var(--text);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.desktop {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 22px;
+  padding-bottom: 70px;
+  background-color: #c7e9d6;
+  background-image:
+    radial-gradient(#fff8d7 2px, transparent 2px),
+    linear-gradient(135deg, #b9e4cf, #e8f3d2);
+  background-size: 28px 28px, 100% 100%;
+}
+
+.desktop-heading {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #537a65;
+  margin-bottom: 28px;
+}
+
+.desktop-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  gap: 22px 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.desktop-icon {
+  border: 0;
+  background: transparent;
+  color: #3f6553;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.desktop-icon span {
+  font-size: 42px;
+  filter: drop-shadow(2px 3px 0 #fff9e6);
+}
+
+.desktop-icon:hover {
+  background: #fff9dc9c;
+}
+
+.decoration {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.decoration-one {
+  right: 9%;
+  top: 14%;
+  font-size: 120px;
+  color: #fff6c6;
+}
+
+.decoration-two {
+  right: 19%;
+  bottom: 13%;
+  font-size: 150px;
+  color: #f8d1d5;
+}
+
+.decoration-three {
+  left: 45%;
+  top: 16%;
+  font-size: 80px;
+  color: white;
+}
+
+/* Windows */
+
+.window {
+  position: absolute;
+  z-index: 10;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(92vw, 540px);
+  max-height: 75vh;
+  overflow: auto;
+  background: var(--cream);
+  border: 3px solid var(--border);
+  box-shadow: 8px 8px 0 #8dbca5;
+}
+
+.window.hidden,
+.hidden {
+  display: none !important;
+}
+
+.titlebar {
+  background: var(--mint-dark);
+  color: #315d49;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  cursor: grab;
+  user-select: none;
+}
+
+.titlebar:active {
+  cursor: grabbing;
+}
+
+.close {
+  width: 27px;
+  height: 27px;
+  border: 2px solid #638b77;
+  background: var(--yellow);
+  color: #446c55;
+  font-size: 20px;
+  line-height: 18px;
+}
+
+.window-body {
+  padding: 24px;
+  background-image:
+    linear-gradient(#fff9e8cc, #fffdf0f2);
+}
+
+.center {
+  text-align: center;
+}
+
+h1 {
+  font-size: 31px;
+  color: #699f7e;
+}
+
+h2 {
+  color: #649b79;
+  font-size: 22px;
+}
+
+h3 {
+  color: #628d70;
+}
+
+p {
+  line-height: 1.7;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.big-heart {
+  font-size: 66px;
+  margin: 12px;
+  animation: float 2.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+
+.date-box {
+  display: inline-block;
+  background: var(--yellow);
+  border: 2px dashed #b8b18b;
+  padding: 12px;
+  margin: 12px;
+  font-weight: bold;
+}
+
+.cute-button {
+  background: var(--yellow);
+  color: #53765d;
+  border: 2px solid #86a38a;
+  box-shadow: 4px 4px 0 #a9cbb0;
+  padding: 12px 18px;
+  font-weight: bold;
+  margin: 12px 5px;
+  transition: transform 0.15s;
+}
+
+.cute-button:hover:not(:disabled) {
+  background: #ffe79a;
+  transform: translateY(-3px);
+}
+
+.cute-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.message-box {
+  background: #fff3c8;
+  border: 2px dashed #b7c59c;
+  padding: 15px;
+  margin: 18px 0;
+  text-align: center;
+}
+
+/* Timeline */
+
+.timeline {
+  margin: 22px 0;
+  border-left: 3px dashed #9fcbb1;
+  padding-left: 16px;
+}
+
+.timeline div {
+  display: flex;
+  gap: 18px;
+  margin: 16px 0;
+  background: #e5f3df;
+  padding: 10px;
+}
+
+.timeline b {
+  color: #719e79;
+}
+
+/* Photos */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.photo-card {
+  background: white;
+  border: 2px solid #9dbda7;
+  padding: 9px 9px 15px;
+  box-shadow: 3px 4px 0 #c5d9c4;
+  transform: rotate(-2deg);
+  color: #607c66;
+}
+
+.photo-card:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.photo-card:hover {
+  transform: rotate(0) scale(1.04);
+}
+
+.photo-placeholder {
+  background: #e2efd9;
+  height: 105px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+/* Quiz */
+
+#quiz-options {
+  display: grid;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 340px;
+}
+
+.quiz-option {
+  padding: 13px;
+  background: #fff3c6;
+  border: 2px solid #a2b99c;
+  color: #57745f;
+  font-weight: bold;
+}
+
+.quiz-option:hover {
+  background: #e3f1d9;
+}
+
+#quiz-feedback {
+  min-height: 28px;
+  font-weight: bold;
+}
+
+/* Heart game */
+
+.game-score {
+  font-size: 19px;
+  font-weight: bold;
+  margin: 15px;
+}
+
+#game-area {
+  width: 100%;
+  height: 245px;
+  position: relative;
+  background:
+    radial-gradient(#fff8c9 3px, transparent 3px),
+    linear-gradient(#d5eedc, #f5f6cf);
+  background-size: 28px 28px, 100% 100%;
+  border: 3px dashed #93bba0;
+  overflow: hidden;
+}
+
+#moving-heart {
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  background: transparent;
+  border: 0;
+  font-size: 45px;
+  transition: left 0.15s, top 0.15s;
+}
+
+#moving-heart:hover {
+  transform: scale(1.15);
+}
+
+/* Letter */
+
+.love-letter {
+  background: #fff8e6;
+  border: 2px dashed #c9b98f;
+  padding: 24px;
+  text-align: left;
+  margin: 22px 0;
+  box-shadow: 4px 4px 0 #e4ebcf;
+}
+
+#final-surprise {
+  background: #e0f1df;
+  border: 2px dashed #8fbc9f;
+  margin-top: 20px;
+  padding: 15px;
+}
+
+/* Taskbar */
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 48px;
+  background: #a9d8bb;
+  border-top: 3px solid #729d83;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 6px 12px;
+  z-index: 100;
+  font-size: 12px;
+}
+
+.taskbar button {
+  background: #fff0b5;
+  border: 2px solid #769c80;
+  padding: 8px 14px;
+  color: #456f55;
+  font-weight: bold;
+}
+
+.taskbar span:last-child {
+  margin-left: auto;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .desktop-heading {
+    font-size: 10px;
+  }
+
+  .desktop-icons {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .desktop-icon span {
+    font-size: 34px;
+  }
+
+  .window {
+    top: 18%;
+    max-height: 70vh;
+  }
+
+  .window-body {
+    padding: 17px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 19px;
+  }
+
+  .decoration {
+    opacity: 0.25;
+  }
+}

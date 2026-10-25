@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOVE.EXE | Olivia & Terry</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <div class="desktop">
+    <div class="desktop-heading">
+      <span>✿ Olivia's little world</span>
+      <span>est. 04.27.2026 ♡</span>
+    </div>
+
+    <div class="desktop-icons">
+      <button class="desktop-icon" data-open="welcome">
+        <span>💻</span> LOVE.EXE
+      </button>
+
+      <button class="desktop-icon" data-open="memories">
+        <span>📁</span> Our Story
+      </button>
+
+      <button class="desktop-icon" data-open="photos">
+        <span>📷</span> Photos
+      </button>
+
+      <button class="desktop-icon" data-open="quiz">
+        <span>🎮</span> Love Quiz
+      </button>
+
+      <button class="desktop-icon" data-open="hearts">
+        <span>💗</span> Heart Game
+      </button>
+
+      <button class="desktop-icon" data-open="letter">
+        <span>💌</span> Secret Letter
+      </button>
+    </div>
+
+    <div class="decoration decoration-one">✿</div>
+    <div class="decoration decoration-two">♡</div>
+    <div class="decoration decoration-three">✦</div>
+
+    <!-- Welcome -->
+    <section class="window" id="welcome">
+      <div class="titlebar">
+        <span>♡ LOVE.EXE</span>
+        <button class="close" data-close="welcome">×</button>
+      </div>
+
+      <div class="window-body center">
+        <div class="big-heart">💗</div>
+        <p class="eyebrow">SPECIAL ANNIVERSARY EDITION</p>
+        <h1>Welcome, Terry!</h1>
+        <p>You have a love message from Olivia...</p>
+
+        <div class="date-box">
+          04.27.2026 — 10.27.2026
+        </div>
+
+        <p>Six months down, forever to go ♡</p>
+
+        <button class="cute-button" data-open="memories">
+          START EXPLORING →
+        </button>
+      </div>
+    </section>
+
+    <!-- Memories -->
+    <section class="window hidden" id="memories">
+      <div class="titlebar">
+        <span>📁 Our Story</span>
+        <button class="close" data-close="memories">×</button>
+      </div>
+
+      <div class="window-body">
+        <h2>Our Little Timeline ♡</h2>
+        <p>Some of my favorite moments with you...</p>
+
+        <div class="timeline">
+          <div><b>03.09</b><span>💌 The confession</span></div>
+          <div><b>04.27</b><span>💕 We became us</span></div>
+          <div><b>05.16</b><span>💋 Our first kiss</span></div>
+          <div><b>05.27</b><span>🌷 Our first month</span></div>
+          <div><b>06.26</b><span>💍 Our rings</span></div>
+          <div><b>10.27</b><span>🎂 Six months together!</span></div>
+        </div>
+
+        <div class="message-box">
+          And the best part? Our story isn't over yet.
+        </div>
+
+        <button class="cute-button" data-open="photos">
+          OPEN PHOTO ALBUM →
+        </button>
+      </div>
+    </section>
+
+    <!-- Photos -->
+    <section class="window hidden" id="photos">
+      <div class="titlebar">
+        <span>📷 Our Photo Album</span>
+        <button class="close" data-close="photos">×</button>
+      </div>
+
+      <div class="window-body">
+        <h2>Little Moments, Big Love</h2>
+        <p>Click a photo to read a little note ♡</p>
+
+        <div class="photo-grid">
+          <button class="photo-card" data-photo="0">
+            <div class="photo-placeholder">🌷</div>
+            <span>Our Beginning</span>
+          </button>
+
+          <button class="photo-card" data-photo="1">
+            <div class="photo-placeholder">🌅</div>
+            <span>Our Adventures</span>
+          </button>
+
+          <button class="photo-card" data-photo="2">
+            <div class="photo-placeholder">🧸</div>
+            <span>Little Things</span>
+          </button>
+
+          <button class="photo-card" data-photo="3">
+            <div class="photo-placeholder">💍</div>
+            <span>Our Memories</span>
+          </button>
+        </div>
+
+        <p id="photo-note" class="message-box">
+          Pick a memory to see what it means to me!
+        </p>
+      </div>
+    </section>
+
+    <!-- Quiz -->
+    <section class="window hidden" id="quiz">
+      <div class="titlebar">
+        <span>🎮 Love Quiz</span>
+        <button class="close" data-close="quiz">×</button>
+      </div>
+
+      <div class="window-body center">
+        <p class="eyebrow">LEVEL 01</p>
+        <h2>How Well Do You Know Us?</h2>
+
+        <div id="quiz-area">
+          <p id="question-number"></p>
+          <h3 id="question-text"></h3>
+          <div id="quiz-options"></div>
+          <p id="quiz-feedback"></p>
+        </div>
+
+        <div id="quiz-complete" class="hidden">
+          <div class="big-heart">🏆</div>
+          <h2>LEVEL COMPLETE!</h2>
+          <p>You know our story so well ♡</p>
+          <button class="cute-button" data-open="hearts">
+            NEXT LEVEL →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Heart Game -->
+    <section class="window hidden" id="hearts">
+      <div class="titlebar">
+        <span>💗 Heart Collector</span>
+        <button class="close" data-close="hearts">×</button>
+      </div>
+
+      <div class="window-body center">
+        <p class="eyebrow">LEVEL 02</p>
+        <h2>Catch My Love!</h2>
+        <p>Catch 10 hearts to complete the level.</p>
+
+        <div class="game-score">
+          Hearts: <span id="heart-score">0</span> / 10
+        </div>
+
+        <div id="game-area">
+          <button id="moving-heart">💗</button>
+        </div>
+
+        <p id="heart-message">Catch the heart!</p>
+
+        <div id="heart-complete" class="hidden">
+          <h3>YOU DID IT! ♡</h3>
+          <p>You caught all my love!</p>
+        </div>
+
+        <button class="cute-button" id="letter-button"
+                data-open="letter" disabled>
+          🔒 UNLOCK SECRET LETTER
+        </button>
+      </div>
+    </section>
+
+    <!-- Secret Letter -->
+    <section class="window hidden" id="letter">
+      <div class="titlebar">
+        <span>💌 Secret Letter</span>
+        <button class="close" data-close="letter">×</button>
+      </div>
+
+      <div class="window-body center">
+        <div id="letter-locked">
+          <div class="big-heart">🔒</div>
+          <h2>TOP SECRET!</h2>
+          <p>This letter is only for Terry.</p>
+          <p>Complete the Love Quiz and Heart Game first!</p>
+          <button class="cute-button" data-open="quiz">
+            GO TO LOVE QUIZ →
+          </button>
+        </div>
+
+        <div id="letter-unlocked" class="hidden">
+          <h2>To My Favorite Person ♡</h2>
+
+          <div class="love-letter">
+            <p>Dear Terry,</p>
+
+            <p>Happy six months, my love!</p>
+
+            <p>
+              I can't believe it's already been six months
+              since we became us. So many little moments
+              with you have turned into my favorite memories.
+            </p>
+
+            <p>
+              Thank you for making me laugh, for being
+              there for me, and for making even ordinary
+              days feel special.
+            </p>
+
+            <p>
+              I know we're not perfect, but I'm so happy
+              that we're learning and growing together.
+            </p>
+
+            <p>
+              If I could go back to the beginning,
+              I would still choose you.
+            </p>
+
+            <p>
+              Here's to more adventures, more memories,
+              and more love.
+            </p>
+
+            <p>I love you so much ♡</p>
+            <p>Love,<br>Olivia</p>
+          </div>
+
+          <button class="cute-button" id="final-button">
+            ONE LAST THING ♡
+          </button>
+
+          <div id="final-surprise" class="hidden">
+            <div class="big-heart">💖</div>
+            <h2>Happy 6 Months!</h2>
+            <p>You're my favorite person.</p>
+            <p>♡ Olivia + Terry ♡</p>
+            <p>To be continued...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="taskbar">
+      <button data-open="welcome">✿ START</button>
+      <span>LOVE.EXE ♡</span>
+      <span>10.27.2026</span>
+    </div>
+  </div>
+</body>
+</html>
