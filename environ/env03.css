@@ -109,3 +109,13 @@ h1 {
         width: 100%;
     }
 }
+
+.object img {
+    cursor: pointer;
+}
+
+#output {
+    margin: 30px auto;
+    font-size: 20px;
+    color: #b86e78;
+}
